@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gunther - Ihre professionelle Webpräsenz">
+    <title>Gunther - Willkommen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">Gunther</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Start</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Leistungen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Kontakt</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 class="hero-title">Willkommen bei Gunther</h1>
+                <p class="hero-subtitle">Ihre zuverlässige Lösung für professionelle Dienstleistungen</p>
+                <a href="#contact" class="cta-button">Kontaktieren Sie uns</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Über Gunther</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Gunther steht für Qualität, Zuverlässigkeit und professionellen Service. Seit Jahren bieten wir unseren Kunden erstklassige Lösungen, die auf ihre individuellen Bedürfnisse zugeschnitten sind.</p>
+                        <p>Unser erfahrenes Team ist darauf spezialisiert, komplexe Herausforderungen zu meistern und innovative Ansätze zu entwickeln, die nachhaltigen Erfolg gewährleisten.</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image">
+                            <span>Gunther</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Unsere Leistungen</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Beratung</h3>
+                        <p>Professionelle Beratung für Ihre Projekte und Herausforderungen</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Umsetzung</h3>
+                        <p>Zuverlässige Umsetzung Ihrer Vorhaben mit höchster Qualität</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Support</h3>
+                        <p>Kontinuierlicher Support und Betreuung für langfristigen Erfolg</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Nehmen Sie Kontakt auf</h3>
+                        <p>Wir freuen uns auf Ihre Anfrage und stehen Ihnen gerne zur Verfügung.</p>
+                        <div class="contact-details">
+                            <p><strong>E-Mail:</strong> info@gunther.de</p>
+                            <p><strong>Telefon:</strong> +49 123 456 789</p>
+                            <p><strong>Adresse:</strong> Musterstraße 123, 12345 Musterstadt</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Nachricht:</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Nachricht senden</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gunther. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
