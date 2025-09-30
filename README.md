@@ -5,10 +5,15 @@ Eine moderne, responsive Website für Gunther mit professionellem Design und int
 ## Features
 
 - **Responsive Design**: Optimiert für Desktop, Tablet und Mobile Geräte
-- **Moderne Navigation**: Hamburger-Menü für Mobile Geräte mit smooth scrolling
-- **Interaktives Kontaktformular**: Mit Validierung und Feedback
-- **Professionelles Design**: Gradient Hero-Bereich, animierte Service-Karten
-- **Deutsche Sprache**: Vollständig auf Deutsch lokalisiert
+- **Moderne Navigation**: Hamburger-Menü & aktives Link-Highlighting
+- **Dark / Light Mode**: Mit LocalStorage-Persistenz und sanfter Transition
+- **Scroll Progress Bar**: Dünner Indikator oben für Lesefortschritt
+- **Back-to-Top Button**: Erscheint nach Scroll für schnelle Navigation
+- **Testimonials Slider**: Automatisch rotierend, pausiert bei Hover/Fokus
+- **Interaktives Kontaktformular**: Mit Validierung, Feedback und Fokus-Styling
+- **Verbesserte Animationen**: IntersectionObserver Reveal, Typing Effekt Hero
+- **Accessible & Semantisch**: ARIA Attribute, Fokuszustände, reduzierbare Motion
+- **Performance-freundlich**: Vanilla JS ohne Framework, throtteled Scroll Events
 
 ## Technologie
 
@@ -28,10 +33,12 @@ Eine moderne, responsive Website für Gunther mit professionellem Design und int
 
 ## Sektionen
 
-1. **Hero**: Willkommensbereich mit Call-to-Action
-2. **Über mich**: Persönliche Vorstellung und Skills
-3. **Services**: Angebotene Dienstleistungen mit Icons
-4. **Kontakt**: Kontaktinformationen und Kontaktformular
+1. **Hero**: Willkommensbereich mit Call-to-Action + Typing Effekt
+2. **Über mich**: Vorstellung & Skills mit Badge-Styling
+3. **Services**: Animierte Karten mit Tilt-Effekt
+4. **Testimonials**: Kundenstimmen mit Slider & Dots-Navigation
+5. **Kontakt**: Info + Formular mit Validierung
+6. **Footer**: Dynamische Jahreszahl
 
 ## Lokale Entwicklung
 
@@ -65,9 +72,43 @@ Einfach alle Dateien (index.html, style.css, script.js) auf den Server hochladen
 - Kontaktdaten in der Kontakt-Sektion aktualisieren
 
 ### Design anpassen
-- Farben in `style.css` ändern (CSS Custom Properties werden verwendet)
-- Layout-Anpassungen in den entsprechenden CSS-Bereichen
+- Farben & Theme: In `style.css` unter `:root` und `:root.dark` (CSS Variablen)
+- Gradients & Effekte: Hero-Gradient (`--gradient-hero`) anpassen
+- Komponenten: Klassen wie `.service-card`, `.testimonial` gezielt stylen
+
+### Dark Mode
+Das Theme wird über die Klasse `dark` auf `html` gesteuert.
+
+```js
+// Beispiel Umschalten manuell
+document.documentElement.classList.toggle('dark');
+```
+
+Der Button mit `#theme-toggle` kümmert sich automatisch um Persistenz.
 
 ### Funktionalität erweitern
-- Neue Features in `script.js` hinzufügen
-- Formular mit Backend-Integration verbinden
+- Neue Effekte hinzufügen: In `script.js` Modulartig neue init-Funktionen ergänzen
+- Formular-Anbindung: Fetch POST Request an Backend/Service (z.B. Formspree)
+- SEO erweitern: Open Graph Images hinzufügen (`<meta property="og:image">`)
+- Performance: Bilder lazy loaden (`loading="lazy"`), CSS minifizieren
+
+## Quick Start
+
+```bash
+python3 -m http.server 8000
+# oder
+npx http-server
+```
+
+Browser öffnen: http://localhost:8000
+
+## Nächste Ideen (Optional)
+
+- Favicon & Social Share Image ergänzen
+- Service-Karten via JSON generieren (leicht wartbar)
+- Formular mit echter API (Rate Limiting, Honeypot Spam Schutz)
+- Lighthouse Optimierung (CLS/Performance Feinschliff)
+- Animierte SVG Icons statt Emojis
+
+---
+Made mit ❤️ und Vanilla Web Tech.

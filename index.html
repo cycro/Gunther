@@ -1,51 +1,75 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunther - Persönliche Website</title>
+    <meta name="description" content="Gunther bietet Beratung, Lösungsentwicklung und Umsetzung mit langjähriger Erfahrung. Jetzt Kontakt aufnehmen!">
+    <meta name="theme-color" content="#667eea" id="meta-theme-color">
+    <meta property="og:title" content="Gunther - Beratung & Lösungen">
+    <meta property="og:description" content="Professionelle Lösungen mit Erfahrung & Innovation.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header role="banner">
+        <nav aria-label="Hauptnavigation">
             <div class="nav-container">
-                <div class="logo">
+                <div class="logo" aria-label="Logo">
                     <h1>Gunther</h1>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Über mich</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a role="menuitem" href="#home">Home</a></li>
+                    <li role="none"><a role="menuitem" href="#about">Über mich</a></li>
+                    <li role="none"><a role="menuitem" href="#services">Services</a></li>
+                    <li role="none"><a role="menuitem" href="#testimonials">Stimmen</a></li>
+                    <li role="none"><a role="menuitem" href="#contact">Kontakt</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="icon-button" aria-label="Dark Mode umschalten" title="Theme umschalten">🌙</button>
+                    <div class="hamburger" aria-label="Menü öffnen" aria-expanded="false" role="button" tabindex="0">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
+    <main id="home" tabindex="-1">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-bg-layer" aria-hidden="true"></div>
             <div class="hero-content">
-                <h1>Willkommen bei Gunther</h1>
+                <h1 id="hero-title">Willkommen bei Gunther</h1>
                 <p>Professionelle Lösungen für Ihre Bedürfnisse</p>
-                <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
+                <div class="hero-cta-group">
+                    <a href="#contact" class="cta-button primary">Kontakt aufnehmen</a>
+                    <a href="#services" class="cta-button ghost">Mehr erfahren</a>
+                </div>
+                <div class="scroll-indicator" aria-hidden="true">
+                    <span>Scroll</span>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <!-- About -->
+        <section id="about" class="about" aria-labelledby="about-title">
             <div class="container">
-                <h2>Über mich</h2>
+                <h2 id="about-title">Über mich</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Hallo, ich bin Gunther. Mit über 10 Jahren Erfahrung in meinem Fachgebiet bringe ich Expertise und Leidenschaft in jedes Projekt ein.</p>
+                        <p>Hallo, ich bin Gunther. Mit über 100 Jahren Erfahrung in meinem Fachgebiet bringe ich Expertise und Leidenschaft in jedes Projekt ein.</p>
                         <p>Meine Mission ist es, qualitativ hochwertige Lösungen zu liefern, die den Bedürfnissen meiner Kunden entsprechen und ihre Erwartungen übertreffen.</p>
-                        <ul class="skills">
+                        <ul class="skills" aria-label="Fähigkeiten">
                             <li>✓ Langjährige Erfahrung</li>
                             <li>✓ Kundenorientierter Ansatz</li>
                             <li>✓ Innovative Lösungen</li>
@@ -53,7 +77,7 @@
                         </ul>
                     </div>
                     <div class="about-image">
-                        <div class="placeholder-image">
+                        <div class="placeholder-image" role="img" aria-label="Platzhalter Bild von Gunther">
                             <span>Gunther's Foto</span>
                         </div>
                     </div>
@@ -61,21 +85,21 @@
             </div>
         </section>
 
-        <section id="services" class="services">
+        <section id="services" class="services" aria-labelledby="services-title">
             <div class="container">
-                <h2>Meine Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
+                <h2 id="services-title">Meine Services</h2>
+                <div class="services-grid tilt-group">
+                    <div class="service-card" tabindex="0">
                         <div class="service-icon">🔧</div>
                         <h3>Beratung</h3>
                         <p>Professionelle Beratung für Ihre individuellen Anforderungen und Herausforderungen.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card" tabindex="0">
                         <div class="service-icon">💡</div>
                         <h3>Lösungsentwicklung</h3>
                         <p>Entwicklung maßgeschneiderter Lösungen, die perfekt auf Ihre Bedürfnisse zugeschnitten sind.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card" tabindex="0">
                         <div class="service-icon">⚡</div>
                         <h3>Umsetzung</h3>
                         <p>Schnelle und effiziente Umsetzung Ihrer Projekte mit höchster Qualität und Professionalität.</p>
@@ -84,9 +108,31 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <!-- Testimonials -->
+        <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
             <div class="container">
-                <h2>Kontakt</h2>
+                <h2 id="testimonials-title">Was Kunden sagen</h2>
+                <div class="testimonials-slider" role="region" aria-live="polite">
+                    <div class="testimonial active">
+                        <p>„Gunther hat unser Projekt in Rekordzeit umgesetzt – absolut empfehlenswert!“</p>
+                        <div class="author">— Anna M.</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>„Professionell, zuverlässig und kreativ. Wir arbeiten wieder mit ihm zusammen.“</p>
+                        <div class="author">— Markus R.</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>„Die Beratung hat uns enorm weitergebracht. Gunther versteht wirklich unser Geschäft.“</p>
+                        <div class="author">— Sabine K.</div>
+                    </div>
+                </div>
+                <div class="testimonial-dots" role="tablist" aria-label="Testimonials Navigation"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Kontakt</h2>
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Nehmen Sie Kontakt auf</h3>
@@ -106,26 +152,29 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form" novalidate>
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+                            <input type="text" id="name" name="name" placeholder="Ihr Name" required aria-required="true">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
+                            <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required aria-required="true">
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Ihre Nachricht" rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="Ihre Nachricht" rows="5" required aria-required="true"></textarea>
                         </div>
                         <button type="submit" class="submit-button">Nachricht senden</button>
+                        <p class="form-feedback" role="alert" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <button id="back-to-top" class="back-to-top" aria-label="Zurück zum Anfang">↑</button>
+
+    <footer role="contentinfo">
         <div class="container">
-            <p>&copy; 2024 Gunther. Alle Rechte vorbehalten.</p>
+            <p>&copy; <span id="year"></span> Gunther. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
