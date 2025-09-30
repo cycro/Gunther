@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunther - Persönliche Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Gunther</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Willkommen bei Gunther</h1>
+                <p>Professionelle Lösungen für Ihre Bedürfnisse</p>
+                <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Über mich</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hallo, ich bin Gunther. Mit über 10 Jahren Erfahrung in meinem Fachgebiet bringe ich Expertise und Leidenschaft in jedes Projekt ein.</p>
+                        <p>Meine Mission ist es, qualitativ hochwertige Lösungen zu liefern, die den Bedürfnissen meiner Kunden entsprechen und ihre Erwartungen übertreffen.</p>
+                        <ul class="skills">
+                            <li>✓ Langjährige Erfahrung</li>
+                            <li>✓ Kundenorientierter Ansatz</li>
+                            <li>✓ Innovative Lösungen</li>
+                            <li>✓ Zuverlässige Umsetzung</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image">
+                            <span>Gunther's Foto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Meine Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Beratung</h3>
+                        <p>Professionelle Beratung für Ihre individuellen Anforderungen und Herausforderungen.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💡</div>
+                        <h3>Lösungsentwicklung</h3>
+                        <p>Entwicklung maßgeschneiderter Lösungen, die perfekt auf Ihre Bedürfnisse zugeschnitten sind.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>Umsetzung</h3>
+                        <p>Schnelle und effiziente Umsetzung Ihrer Projekte mit höchster Qualität und Professionalität.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Nehmen Sie Kontakt auf</h3>
+                        <p>Ich freue mich darauf, von Ihnen zu hören und Ihnen bei Ihren Projekten zu helfen.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="icon">📧</span>
+                                <span>gunther@example.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">📱</span>
+                                <span>+49 123 456 789</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">📍</span>
+                                <span>Deutschland</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Ihre E-Mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Ihre Nachricht" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gunther. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
